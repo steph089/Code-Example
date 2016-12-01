@@ -1,0 +1,45 @@
+<div id="body">
+	<div>
+		<div>
+			<div class="media">
+				<div>
+					<div>
+						<a ui-sref="pictures"><h3>Pictures</h3></a>
+						<ul>
+							<li ng-repeat = "picture in pictures">
+								<a ui-sref="picture({Id: picture.ID})" class="figure"><img src="images/pictures/{{picture.Picture}}" alt="" width="194" height="125"></a>
+								<span><a ui-sref="picture({Id: picture.ID})">{{picture.Title}}</a></span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<a ui-sref="videos"><h3>Videos</h3></a>
+						<ul>
+						<li ng-repeat = "video in videos">
+								<a ui-sref="video({Id: video.ID})" class="figure"><img src="images/videos/{{video.Picture}}" alt="" width="194" height="125"></a>
+								<span><a ui-sref="video({Id: video.ID})">{{video.Title}}</a></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article">
+					<h3>this is just a place holder</h3>
+					<ul>
+						<li>
+							<a href="#" class="figure"><img src="images/media2.jpg" alt=""></a>
+							<p>
+								Stuff should go here
+							</p>
+						</li>
+						<li>
+							<a ui-sref="media" class="figure"><img src="images/media3.jpg" alt=""></a>
+							<p>
+								If you're having problems with this website. I'll fix it later....Or you can leave a message in the forums
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

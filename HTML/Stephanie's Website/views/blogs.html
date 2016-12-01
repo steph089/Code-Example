@@ -1,0 +1,33 @@
+<div id="body">
+    <div>
+        <div class="blog">
+            <div class="content">
+            	<ul>
+            		<li ng-repeat = "blog in blogs">
+						<div class="header">
+								<b>{{blog.Title}}</b><span><a ui-sref="blog({Id: blog.ID})">{{blog.Poster}}</a><a ui-sref="blog({Id: blog.ID})">{{blog.Date}}</a></span>
+							</div>
+							<div class="article">
+								<a ui-sref="blog({Id: blog.ID})" class="figure"><img src="images/pages/{{blog.Picture}}" alt=""></a>
+								<p>
+								{{blog.Text| limitTo:250}}....<a ui-sref="blog({Id: blog.ID})" class="more" >read more</a>
+								</p>
+						</div> 
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar">
+				<div>
+				<span><a ui-sref="blogs({recent: 0})"  class="ng-class: popularm;" >popular post</a></span> 
+				<span><a ui-sref="blogs({recent: 1})" class="ng-class: recentm;">recent post</a></span>
+				</div>				
+				<ul>
+					<li ng-repeat = "recent in recent">
+						<a ui-sref="blog({Id: recent.ID})">{{recent.Title}}</a>
+						<span><a ui-sref="blog({Id: recent.ID})">{{recent.Poster}}</a><a ui-sref="blog({Id: recent.ID})">{{recent.Date}}</a></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

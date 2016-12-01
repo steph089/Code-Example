@@ -1,0 +1,22 @@
+<div id="body">
+	<div>
+		<div class="about">
+			<div class="content">
+				<form action="PHP/blogcreate.inc.php" method="post" enctype="multipart/form-data">
+					<p>Title <input type="text" name="title" /></p> 
+					<textarea rows="10" cols="70" placeholder="Type here..." name="text"></textarea><br>
+					<input type="radio" name="type" value="pages" checked>Blog
+						<input type="radio" name="type" value="pictures">Picture  
+						<input type="radio" name="type" value="videos">Video <br>
+					<input type="radio" name="private" value="0" checked>Public
+						<input type="radio" name="private" value="1">Private<br>
+					<input type="hidden" name="MAX_FILE_SIZE" value="300000" /> Picture file: <input type="file" name="photo">
+					<p>YouTubeVideoLink <input type="text" name="video" /></p> 
+					<p>Username: <input type="text" name="poster" /></p> 
+					<p>Password: <input type="text" name="password" /></p> 
+					<p><input type="submit" value="submit"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div id="body">
+    <div>
+        <div class="blog">
+            <div class="content">
+            	<ul>
+            		<li>
+						<div class="header">
+							<form action="PHP/blogedit.php" method="post" enctype="multipart/form-data">
+								<p><input type="submit" value="Save">  <b><input type="text" name="Password" placeholder="password"/></b></p>
+								<b><input type="text" name="Title" ng-model="blog.Title" /></b> 
+								<span><b><input type="text" name="Poster" ng-model="blog.Poster" /></b></span>								
+						</div>
+						<div class="article">
+								<a ui-sref="blog({Id: blog.ID})" class="figure"><img src="images/pages/{{blog.Picture}}" alt=""></a><input type="text" name="art3tit" ng-model="blog.Picture">
+								<p>
+								<textarea rows="70" cols="70" ng-model="blogText" name="text"></textarea>			
+								</p>
+							</form>
+						</div> 
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

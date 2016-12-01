@@ -1,0 +1,35 @@
+<div id="body">
+	<div>
+		<div>
+			<div class="blog">
+				<div class="content">
+					<ul>
+						<li ng-repeat = "video in videos">
+						<div class="header">						
+								<b>{{video.Title}}</b><span><a ui-sref="video({Id: video.ID})">{{video.Poster}}</a><a ui-sref="video({Id: video.ID})">{{video.Date}}</a></span>
+							</div>
+							<div class="article">
+								<a ui-sref="video({Id: video.ID})" class="figure"><img src="images/{{videos.Picture}}" alt=""></a>
+								<p>
+								{{video.Text| limitTo:250}}....<a ui-sref="video({Id: video.ID})" class="more" >Watch</a>
+								</p>
+							</div> 
+						</li>
+					</ul>
+				</div>	
+				<div class="sidebar">
+					<div>
+					<span><a ui-sref="videos({recent: 0})"  class="ng-class: popularm;" >popular post</a></span> 
+					<span><a a ui-sref="videos({recent: 1})" class="ng-class: recentm;">recent post</a></span>
+					</div>				
+					<ul>
+						<li ng-repeat = "recent in recent">
+							<a ui-sref="video({Id: recent.ID})">{{recent.Title}}</a>
+							<span><a ui-sref="video({Id: recent.ID})">{{recent.Poster}}</a><a ui-sref="video({Id: recent.ID})">{{recent.Date}}</a></span>
+						</li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>

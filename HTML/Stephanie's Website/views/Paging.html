@@ -1,0 +1,15 @@
+<div ng-show="total">
+	<span class="text-muted">
+	  <b>{{ ((page - 1) * size) + 1 }} - {{ page != maxPages ? (page * size) : total }}</b>
+	   of
+	  <b>{{ total }}</b>
+	</span>
+	<div class="btn-group btn-group-sm mg-left-5 mg-top-5">
+	  <button type="button" class="btn btn-default" ng-disabled="page == 1" ng-click="previousPage()">
+	    <span class="fa fa-chevron-left"></span>
+	  </button>
+	  <button type="button" class="btn btn-default" ng-disabled="page == maxPages" ng-click="nextPage()">
+	    <span class="fa fa-chevron-right"></span>
+	  </button>
+	</div>
+</div>

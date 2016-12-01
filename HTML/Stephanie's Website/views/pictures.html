@@ -1,0 +1,35 @@
+<div id="body">
+	<div>
+		<div>
+			<div class="blog">
+				<div class="content">
+					<ul>
+						<li ng-repeat = "picture in pictures">
+						<div class="header">
+							
+								<b>{{picture.Title}}</b><span><a ui-sref="picture({Id: picture.ID})">{{picture.Date}}</a><a ui-sref="picture({Id: picture.ID})">{{picture.Poster}}</a></span>
+							</div>
+							<div class="article">
+								<a ui-sref="picture({Id: picture.ID})" class="figure"><img src="images/pictures/{{picture.Picture}}" alt=""></a>
+								<p>
+								{{picture.Text| limitTo:250}}....<a ui-sref="picture({Id: picture.ID})" class="more" >read more</a>
+								</p>
+							</div> 
+						</li>
+					</ul>
+				</div>	
+				<div class="sidebar">
+					<div>
+					<span><a ui-sref="pictures({recent: 0})"  class="ng-class: popularm;" >popular post</a></span> 
+					<span><a ui-sref="pictures({recent: 1})" class="ng-class: recentm;">recent post</a></span>
+					</div>				
+					<ul>
+						<li ng-repeat = "recent in recent">
+							<a ui-sref="picture({Id: recent.ID})">{{recent.Title}}</a>
+							<span><a ui-sref="picture({Id: recent.ID})">{{recent.Poster}}</a><a ui-sref="picture({Id: recent.ID})">{{recent.Date}}</a></span>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
